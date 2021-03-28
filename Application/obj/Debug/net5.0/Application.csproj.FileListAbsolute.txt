@@ -1,0 +1,15 @@
+C:\Users\ahmed.mahbub\Desktop\AirBangladesh\Application\obj\Debug\net5.0\Application.csprojAssemblyReference.cache
+C:\Users\ahmed.mahbub\Desktop\AirBangladesh\Application\obj\Debug\net5.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ahmed.mahbub\Desktop\AirBangladesh\Application\obj\Debug\net5.0\Application.AssemblyInfoInputs.cache
+C:\Users\ahmed.mahbub\Desktop\AirBangladesh\Application\obj\Debug\net5.0\Application.AssemblyInfo.cs
+C:\Users\ahmed.mahbub\Desktop\AirBangladesh\Application\obj\Debug\net5.0\Application.csproj.CoreCompileInputs.cache
+C:\Users\ahmed.mahbub\Desktop\AirBangladesh\Application\bin\Debug\net5.0\Application.deps.json
+C:\Users\ahmed.mahbub\Desktop\AirBangladesh\Application\bin\Debug\net5.0\Application.dll
+C:\Users\ahmed.mahbub\Desktop\AirBangladesh\Application\bin\Debug\net5.0\ref\Application.dll
+C:\Users\ahmed.mahbub\Desktop\AirBangladesh\Application\bin\Debug\net5.0\Application.pdb
+C:\Users\ahmed.mahbub\Desktop\AirBangladesh\Application\bin\Debug\net5.0\Core.dll
+C:\Users\ahmed.mahbub\Desktop\AirBangladesh\Application\bin\Debug\net5.0\Core.pdb
+C:\Users\ahmed.mahbub\Desktop\AirBangladesh\Application\obj\Debug\net5.0\Application.csproj.CopyComplete
+C:\Users\ahmed.mahbub\Desktop\AirBangladesh\Application\obj\Debug\net5.0\Application.dll
+C:\Users\ahmed.mahbub\Desktop\AirBangladesh\Application\obj\Debug\net5.0\ref\Application.dll
+C:\Users\ahmed.mahbub\Desktop\AirBangladesh\Application\obj\Debug\net5.0\Application.pdb

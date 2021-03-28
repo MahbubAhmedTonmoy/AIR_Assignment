@@ -1,0 +1,65 @@
+networks:
+  elastic:
+    driver: bridge
+services:
+  DB:
+    container_name: DB
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: r00t.R00T
+    image: mcr.microsoft.com/mssql/server
+    ports:
+    - published: 1433
+      target: 1433
+  airbangladesh:
+    build:
+      context: C:\Users\ahmed.mahbub\Desktop\AIR_Assignment
+      dockerfile: AirBangladesh/Dockerfile
+    container_name: AirBangladesh
+    depends_on:
+      DB:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      ConnectionStrings:DataBase: Server=DB;Database=AirBangladesh;User Id=sa;Password=r00t.R00T
+    image: airbangladesh
+    ports:
+    - published: 9000
+      target: 80
+    - target: 80
+    - target: 443
+    restart: always
+    volumes:
+    - C:\Users\ahmed.mahbub\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+  elasticsearch:
+    container_name: elasticsearch
+    environment:
+      ES_JAVA_OPTS: -Xms512m -Xmx512m
+      discovery.type: single-node
+      xpack.monitoring.enabled: "true"
+      xpack.watcher.enabled: "false"
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.9.2
+    networks:
+      elastic: {}
+    ports:
+    - published: 9200
+      target: 9200
+    volumes:
+    - elasticsearch-data:/usr/share/elasticsearch/data:rw
+  kibana:
+    container_name: kibana
+    depends_on:
+      elasticsearch:
+        condition: service_started
+    environment:
+      ELASTICSEARCH_URL: http://localhost:9200
+    image: docker.elastic.co/kibana/kibana:7.9.2
+    networks:
+      elastic: {}
+    ports:
+    - published: 5601
+      target: 5601
+version: '3.4'
+volumes:
+  elasticsearch-data: {}
